@@ -1,0 +1,3 @@
+﻿route_id,route_name,start_destination_id,end_destination_id,countries_included,ordered_destination_ids,notes
+R01,Paris Circular Highlights,PAR,PAR,France;Belgium;Netherlands;Luxembourg,PAR;BRU;BRG;AMS;RTM;LUX;STR;PAR,Starter route template; road feasibility and border/traffic conditions must be checked.
+R02,Alpine and Italy Circular Tour,ZRH,ZRH,Switzerland;Austria;Italy,ZRH;LUC;INT;INN;MIL;VEN;FLR;ROM;ZRH,"Long-distance starter route; validate driving time, tolls, border rules and trip duration."

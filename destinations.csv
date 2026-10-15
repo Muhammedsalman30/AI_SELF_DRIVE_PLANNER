@@ -1,0 +1,20 @@
+﻿destination_id,country_id,destination_name,destination_type,latitude,longitude,region
+PAR,FR,Paris,city,48.8566,2.3522,Île-de-France
+LYO,FR,Lyon,city,45.764,4.8357,Auvergne-Rhône-Alpes
+STR,FR,Strasbourg,city,48.5734,7.7521,Grand Est
+BRU,BE,Brussels,city,50.8503,4.3517,Brussels-Capital
+BRG,BE,Bruges,city,51.2093,3.2247,Flanders
+AMS,NL,Amsterdam,city,52.3676,4.9041,North Holland
+RTM,NL,Rotterdam,city,51.9244,4.4777,South Holland
+LUX,LU,Luxembourg City,city,49.6116,6.1319,Luxembourg
+ZRH,CH,Zurich,city,47.3769,8.5417,Zurich
+LUC,CH,Lucerne,city,47.0502,8.3093,Lucerne
+INT,CH,Interlaken,town,46.6863,7.8632,Bern
+INN,AT,Innsbruck,city,47.2692,11.4041,Tyrol
+VIE,AT,Vienna,city,48.2082,16.3738,Vienna
+MIL,IT,Milan,city,45.4642,9.19,Lombardy
+VEN,IT,Venice,city,45.4408,12.3155,Veneto
+FLR,IT,Florence,city,43.7696,11.2558,Tuscany
+ROM,IT,Rome,city,41.9028,12.4964,Lazio
+MUC,DE,Munich,city,48.1351,11.582,Bavaria
+CGN,DE,Cologne,city,50.9375,6.9603,North Rhine-Westphalia

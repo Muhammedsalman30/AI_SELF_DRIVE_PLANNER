@@ -1,0 +1,41 @@
+﻿attraction_id,destination_id,attraction_name,category,description,latitude,longitude,estimated_visit_hours
+A001,PAR,Eiffel Tower,landmark,Iconic observation tower and Paris landmark.,48.8584,2.2945,2
+A002,PAR,Louvre Museum,museum,Major art museum with extensive historic collections.,48.8606,2.3376,3
+A003,PAR,Notre-Dame Cathedral,religious_site,Historic cathedral on the Île de la Cité.,48.853,2.3499,1.5
+A004,LYO,Basilica of Notre-Dame de Fourvière,religious_site,Hilltop basilica overlooking Lyon.,45.7622,4.8226,1.5
+A005,LYO,Vieux Lyon,historic_district,Historic old town known for Renaissance streets.,45.764,4.827,2
+A006,STR,Strasbourg Cathedral,religious_site,Gothic cathedral in the historic centre.,48.5818,7.7509,1.5
+A007,STR,Petite France,historic_district,Canals and traditional half-timbered buildings.,48.5804,7.74,2
+A008,BRU,Grand-Place,square,Central square surrounded by historic guildhalls.,50.8467,4.3525,1
+A009,BRU,Atomium,landmark,Landmark structure and exhibition space.,50.8949,4.3416,1.5
+A010,BRG,Belfry of Bruges,landmark,Medieval bell tower overlooking Markt square.,51.2089,3.2242,1
+A011,BRG,Burg Square,square,Historic square with notable civic architecture.,51.2083,3.227,1
+A012,AMS,Rijksmuseum,museum,National museum of Dutch art and history.,52.36,4.8852,2.5
+A013,AMS,Anne Frank House,museum,Museum dedicated to Anne Frank and the wartime hiding place.,52.3752,4.8839,1.5
+A014,AMS,Dam Square,square,Central Amsterdam square near the Royal Palace.,52.3731,4.8932,1
+A015,RTM,Markthal,market,Indoor market hall with food stalls and architecture.,51.9203,4.4861,1
+A016,RTM,Erasmus Bridge,bridge,Landmark cable-stayed bridge over the Nieuwe Maas.,51.909,4.4875,0.5
+A017,LUX,Grand Ducal Palace,palace,Official palace in Luxembourg City's old town.,49.6117,6.1319,1
+A018,LUX,Casemates du Bock,historic_site,Historic underground defensive tunnels.,49.6112,6.1355,1.5
+A019,ZRH,Old Town (Altstadt),historic_district,Historic streets around the Limmat river.,47.372,8.542,2
+A020,ZRH,Lake Zurich Promenade,nature,Waterfront promenade with lake views.,47.365,8.545,1.5
+A021,LUC,Chapel Bridge,bridge,Covered wooden bridge and city landmark.,47.051,8.3076,0.5
+A022,LUC,Lion Monument,monument,Rock relief memorial in a small park.,47.0584,8.3105,0.5
+A023,INT,Harder Kulm,viewpoint,Mountain viewpoint above Interlaken; access is seasonal.,46.692,7.863,2
+A024,INT,Höhematte Park,park,Open green space with views towards the Jungfrau region.,46.6865,7.858,1
+A025,INN,Golden Roof,landmark,Historic golden-roofed balcony in Innsbruck old town.,47.2682,11.3928,0.5
+A026,INN,Nordkette Cable Car,viewpoint,Cable car access to mountain viewpoints; check operating status.,47.294,11.393,2.5
+A027,VIE,Schönbrunn Palace,palace,Former imperial summer residence and gardens.,48.1845,16.3122,2.5
+A028,VIE,St. Stephen's Cathedral,religious_site,Gothic cathedral in central Vienna.,48.2085,16.3731,1
+A029,MIL,Duomo di Milano,religious_site,Gothic cathedral and rooftop terraces.,45.4642,9.1919,1.5
+A030,MIL,Galleria Vittorio Emanuele II,historic_site,Historic shopping arcade beside the Duomo.,45.4659,9.19,1
+A031,VEN,St. Mark's Basilica,religious_site,Historic basilica in St. Mark's Square.,45.4345,12.3397,1.5
+A032,VEN,Rialto Bridge,bridge,Historic bridge across the Grand Canal.,45.438,12.3359,0.5
+A033,FLR,Cathedral of Santa Maria del Fiore,religious_site,Florence cathedral complex and dome.,43.7731,11.256,1.5
+A034,FLR,Ponte Vecchio,bridge,Medieval bridge lined with shops.,43.7679,11.2531,0.5
+A035,ROM,Colosseum,historic_site,Ancient Roman amphitheatre.,41.8902,12.4922,2
+A036,ROM,Pantheon,historic_site,"Ancient Roman temple, now a church.",41.8986,12.4769,1
+A037,ROM,Trevi Fountain,landmark,Baroque fountain in central Rome.,41.9009,12.4833,0.5
+A038,MUC,Marienplatz,square,Central square with the New Town Hall.,48.1374,11.5755,1
+A039,MUC,Nymphenburg Palace,palace,Baroque palace and landscaped grounds.,48.1581,11.503,2
+A040,CGN,Cologne Cathedral,religious_site,Gothic cathedral beside Cologne central station.,50.9413,6.9583,1.5
