@@ -1,28 +1,43 @@
 import os
 import requests
+import streamlit as st
 
 from dotenv import load_dotenv
 from database.destination_manager import get_destination_coordinates
 
 
-# Load API key
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Load local .env file
+load_dotenv()
 
-load_dotenv(os.path.join(BASE_DIR, ".env"))
+# Google Maps Routes API URL
+GOOGLE_MAPS_URL = (
+    "https://routes.googleapis.com/directions/v2:computeRoutes"
+)
 
-API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
-GOOGLE_MAPS_URL = "https://routes.googleapis.com/directions/v2:computeRoutes"
+# Read API key from Streamlit Cloud Secrets or local .env
+try:
+    API_KEY = (
+        st.secrets.get("GOOGLE_MAPS_API_KEY")
+        or os.getenv("GOOGLE_MAPS_API_KEY")
+    )
+except Exception:
+    API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
 
 def get_driving_route(origin_id, destination_id):
 
+    # Check API key
     if not API_KEY:
         return {
             "success": False,
-            "message": "Google Maps API key not found in .env file."
+            "message": (
+                "Google Maps API key not found. "
+                "Check your .env file or Streamlit Cloud Secrets."
+            )
         }
 
+    # Get origin and destination coordinates from database
     origin = get_destination_coordinates(origin_id)
     destination = get_destination_coordinates(destination_id)
 
@@ -32,6 +47,7 @@ def get_driving_route(origin_id, destination_id):
             "message": "Origin or destination not found in database."
         }
 
+    # Google Maps request payload
     payload = {
         "origin": {
             "location": {
@@ -54,6 +70,7 @@ def get_driving_route(origin_id, destination_id):
         "computeAlternativeRoutes": False
     }
 
+    # Request headers
     headers = {
         "Content-Type": "application/json",
         "X-Goog-Api-Key": API_KEY,
@@ -62,6 +79,7 @@ def get_driving_route(origin_id, destination_id):
 
     try:
 
+        # Send request to Google Maps Routes API
         response = requests.post(
             GOOGLE_MAPS_URL,
             json=payload,
@@ -69,10 +87,14 @@ def get_driving_route(origin_id, destination_id):
             timeout=30
         )
 
+        # Check API response
         if response.status_code != 200:
             return {
                 "success": False,
-                "message": f"Google Maps API error: {response.status_code} - {response.text}"
+                "message": (
+                    f"Google Maps API error: "
+                    f"{response.status_code} - {response.text}"
+                )
             }
 
         data = response.json()
@@ -85,16 +107,20 @@ def get_driving_route(origin_id, destination_id):
                 "message": "No driving route found."
             }
 
+        # Get first available route
         route = routes[0]
 
+        # Calculate distance
         distance_km = route["distanceMeters"] / 1000
 
+        # Calculate duration
         duration_seconds = int(
             route["duration"].replace("s", "")
         )
 
         duration_minutes = duration_seconds / 60
 
+        # Return route details
         return {
             "success": True,
             "origin": origin["destination_name"],
@@ -104,18 +130,21 @@ def get_driving_route(origin_id, destination_id):
         }
 
     except requests.exceptions.Timeout:
+
         return {
             "success": False,
             "message": "Google Maps request timed out."
         }
 
     except requests.exceptions.RequestException as error:
+
         return {
             "success": False,
             "message": f"Connection error: {error}"
         }
 
     except (KeyError, ValueError, TypeError) as error:
+
         return {
             "success": False,
             "message": f"Unexpected API response: {error}"
